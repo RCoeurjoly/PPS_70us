@@ -1,0 +1,99 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2018  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.8+143 (git sha1 c82aa49, clang 3.8.0-2ubuntu4 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing ILANG frontend.
+Input filename: design.il
+
+2. Printing statistics.
+
+=== invaders ===
+
+   Number of wires:                208
+   Number of wire bits:            281
+   Number of public wires:           9
+   Number of public wire bits:      38
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                240
+     $add                            1
+     $cover                         17
+     $dff                            4
+     $eq                            35
+     $logic_and                      1
+     $logic_not                      2
+     $mux                          178
+     $paramod\timer_1us\PERIOD=100000      1
+     $shiftx                         1
+
+=== $paramod\timer_1us\PERIOD=100000 ===
+
+   Number of wires:                 11
+   Number of wire bits:            135
+   Number of public wires:           4
+   Number of public wire bits:      35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 11
+     $add                            1
+     $cover                          2
+     $dff                            2
+     $eq                             1
+     $le                             1
+     $mux                            4
+
+=== design hierarchy ===
+
+   invaders                          1
+     $paramod\timer_1us\PERIOD=100000      1
+
+   Number of wires:                219
+   Number of wire bits:            416
+   Number of public wires:          13
+   Number of public wire bits:      73
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                250
+     $add                            2
+     $cover                         19
+     $dff                            6
+     $eq                            36
+     $le                             1
+     $logic_and                      1
+     $logic_not                      2
+     $mux                          182
+     $shiftx                         1
+
+3. Executing SMT2 backend.
+Creating SMT-LIBv2 representation of module $paramod\timer_1us\PERIOD=100000.
+Creating SMT-LIBv2 representation of module invaders.
+
+End of script. Logfile hash: 77c80b629a
+CPU: user 0.02s system 0.00s, MEM: 40.62 MB total, 8.45 MB resident
+Yosys 0.8+143 (git sha1 c82aa49, clang 3.8.0-2ubuntu4 -fPIC -Os)
+Time spent: 58% 2x write_smt2 (0 sec), 39% 2x read_ilang (0 sec), ...

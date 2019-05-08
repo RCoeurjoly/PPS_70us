@@ -1,0 +1,147 @@
+##   0:00:00  Solver: z3
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Appending additional step 1.
+##   0:00:00  Appending additional step 2.
+##   0:00:00  Appending additional step 3.
+##   0:00:00  Appending additional step 4.
+##   0:00:00  Appending additional step 5.
+##   0:00:00  Appending additional step 6.
+##   0:00:00  Appending additional step 7.
+##   0:00:00  Appending additional step 8.
+##   0:00:00  Appending additional step 9.
+##   0:00:00  Appending additional step 10.
+##   0:00:00  Appending additional step 11.
+##   0:00:00  Appending additional step 12.
+##   0:00:00  Appending additional step 13.
+##   0:00:00  Appending additional step 14.
+##   0:00:00  Appending additional step 15.
+##   0:00:00  Appending additional step 16.
+##   0:00:00  Appending additional step 17.
+##   0:00:00  Appending additional step 18.
+##   0:00:00  Appending additional step 19.
+##   0:00:00  Appending additional step 20.
+##   0:00:00  Appending additional step 21.
+##   0:00:00  Appending additional step 22.
+##   0:00:00  Appending additional step 23.
+##   0:00:00  Appending additional step 24.
+##   0:00:00  Appending additional step 25.
+##   0:00:00  Appending additional step 26.
+##   0:00:00  Appending additional step 27.
+##   0:00:00  Appending additional step 28.
+##   0:00:00  Appending additional step 29.
+##   0:00:00  Appending additional step 30.
+##   0:00:00  Appending additional step 31.
+##   0:00:00  Appending additional step 32.
+##   0:00:00  Appending additional step 33.
+##   0:00:00  Appending additional step 34.
+##   0:00:00  Appending additional step 35.
+##   0:00:00  Appending additional step 36.
+##   0:00:00  Appending additional step 37.
+##   0:00:00  Appending additional step 38.
+##   0:00:00  Appending additional step 39.
+##   0:00:00  Appending additional step 40.
+##   0:00:00  Appending additional step 41.
+##   0:00:00  Appending additional step 42.
+##   0:00:00  Appending additional step 43.
+##   0:00:00  Appending additional step 44.
+##   0:00:00  Appending additional step 45.
+##   0:00:00  Appending additional step 46.
+##   0:00:00  Appending additional step 47.
+##   0:00:00  Appending additional step 48.
+##   0:00:00  Appending additional step 49.
+##   0:00:00  Appending additional step 50.
+##   0:00:00  Appending additional step 51.
+##   0:00:00  Appending additional step 52.
+##   0:00:00  Appending additional step 53.
+##   0:00:00  Appending additional step 54.
+##   0:00:00  Appending additional step 55.
+##   0:00:00  Appending additional step 56.
+##   0:00:00  Appending additional step 57.
+##   0:00:00  Appending additional step 58.
+##   0:00:00  Appending additional step 59.
+##   0:00:00  Appending additional step 60.
+##   0:00:00  Appending additional step 61.
+##   0:00:00  Appending additional step 62.
+##   0:00:00  Appending additional step 63.
+##   0:00:00  Appending additional step 64.
+##   0:00:00  Appending additional step 65.
+##   0:00:00  Appending additional step 66.
+##   0:00:00  Appending additional step 67.
+##   0:00:00  Appending additional step 68.
+##   0:00:00  Appending additional step 69.
+##   0:00:00  Appending additional step 70.
+##   0:00:00  Appending additional step 71.
+##   0:00:00  Appending additional step 72.
+##   0:00:00  Appending additional step 73.
+##   0:00:00  Appending additional step 74.
+##   0:00:00  Appending additional step 75.
+##   0:00:00  Appending additional step 76.
+##   0:00:00  Appending additional step 77.
+##   0:00:00  Appending additional step 78.
+##   0:00:00  Appending additional step 79.
+##   0:00:00  Appending additional step 80.
+##   0:00:00  Appending additional step 81.
+##   0:00:00  Appending additional step 82.
+##   0:00:00  Appending additional step 83.
+##   0:00:00  Appending additional step 84.
+##   0:00:00  Appending additional step 85.
+##   0:00:00  Appending additional step 86.
+##   0:00:00  Appending additional step 87.
+##   0:00:00  Appending additional step 88.
+##   0:00:00  Appending additional step 89.
+##   0:00:00  Appending additional step 90.
+##   0:00:00  Appending additional step 91.
+##   0:00:00  Appending additional step 92.
+##   0:00:00  Appending additional step 93.
+##   0:00:00  Appending additional step 94.
+##   0:00:00  Appending additional step 95.
+##   0:00:00  Appending additional step 96.
+##   0:00:00  Appending additional step 97.
+##   0:00:00  Appending additional step 98.
+##   0:00:00  Appending additional step 99.
+##   0:00:00  Appending additional step 100.
+##   0:00:00  Re-solving with appended steps..
+##   0:01:00  waiting for solver (1 minute)
+##   0:01:09  Reached cover statement at invaders.v:97 in step 0.
+##   0:01:09  Reached cover statement at timer_1us.v:37 in step 0.
+##   0:01:09  Writing trace to VCD file: engine_0/trace0.vcd
+##   0:01:09  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+##   0:01:10  Writing trace to constraints file: engine_0/trace0.smtc
+##   0:01:10  Checking cover reachability in step 0..
+##   0:01:10  Checking cover reachability in step 1..
+##   0:01:10  Checking cover reachability in step 2..
+##   0:01:10  Checking cover reachability in step 3..
+##   0:01:10  Checking cover reachability in step 4..
+##   0:01:10  Checking cover reachability in step 5..
+##   0:01:10  Checking cover reachability in step 6..
+##   0:01:10  Checking cover reachability in step 7..
+##   0:01:10  Checking cover reachability in step 8..
+##   0:01:10  Checking cover reachability in step 9..
+##   0:01:11  Checking cover reachability in step 10..
+##   0:01:11  Checking cover reachability in step 11..
+##   0:01:12  Checking cover reachability in step 12..
+##   0:01:12  Checking cover reachability in step 13..
+##   0:01:12  Checking cover reachability in step 14..
+##   0:01:13  Checking cover reachability in step 15..
+##   0:01:14  Checking cover reachability in step 16..
+##   0:01:15  Checking cover reachability in step 17..
+##   0:01:17  Checking cover reachability in step 18..
+##   0:01:18  Checking cover reachability in step 19..
+##   0:01:19  Unreached cover statement at invaders.v:111.
+##   0:01:19  Unreached cover statement at invaders.v:100.
+##   0:01:19  Unreached cover statement at invaders.v:108.
+##   0:01:19  Unreached cover statement at invaders.v:105.
+##   0:01:19  Unreached cover statement at invaders.v:107.
+##   0:01:19  Unreached cover statement at invaders.v:109.
+##   0:01:19  Unreached cover statement at invaders.v:103.
+##   0:01:19  Unreached cover statement at invaders.v:110.
+##   0:01:19  Unreached cover statement at invaders.v:104.
+##   0:01:19  Unreached cover statement at invaders.v:98.
+##   0:01:19  Unreached cover statement at invaders.v:106.
+##   0:01:19  Unreached cover statement at invaders.v:113.
+##   0:01:19  Unreached cover statement at invaders.v:102.
+##   0:01:19  Unreached cover statement at invaders.v:112.
+##   0:01:19  Unreached cover statement at invaders.v:99.
+##   0:01:19  Unreached cover statement at invaders.v:101.
+##   0:01:19  Unreached cover statement at timer_1us.v:38.
+##   0:01:19  Status: FAILED (!)

@@ -1,0 +1,22 @@
+[tasks]
+proof
+cover
+
+[options]
+proof: mode prove
+cover: mode cover
+cover: append 100
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal invaders.v
+read -formal timer_1us.v
+read -formal clk_25MHz_generator.v
+prep -top invaders
+
+[files]
+~/Space-Invaders/rtl/invaders.v
+~/Space-Invaders/rtl/timer_1us.v
+~/Space-Invaders/rtl/clk_25MHz_generator.v

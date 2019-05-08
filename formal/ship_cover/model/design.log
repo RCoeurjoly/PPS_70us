@@ -1,0 +1,1037 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2018  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.8+143 (git sha1 c82aa49, clang 3.8.0-2ubuntu4 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing formal SystemVerilog input from `ship.v' to AST representation.
+Generating RTLIL representation for module `\ship'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \ship
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \ship
+Removed 0 unused modules.
+Module ship directly or indirectly contains $assert cells -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 40 empty switches in `\ship.$proc$ship.v:27$46'.
+Cleaned up 40 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\ship.$proc$ship.v:86$232'.
+  Set init value: $formal$ship.v:86$44_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:85$230'.
+  Set init value: $formal$ship.v:85$43_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:84$228'.
+  Set init value: $formal$ship.v:84$42_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:83$226'.
+  Set init value: $formal$ship.v:83$41_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:82$224'.
+  Set init value: $formal$ship.v:82$40_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:81$222'.
+  Set init value: $formal$ship.v:81$39_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:80$220'.
+  Set init value: $formal$ship.v:80$38_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:79$218'.
+  Set init value: $formal$ship.v:79$37_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:78$216'.
+  Set init value: $formal$ship.v:78$36_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:77$214'.
+  Set init value: $formal$ship.v:77$35_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:76$212'.
+  Set init value: $formal$ship.v:76$34_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:75$210'.
+  Set init value: $formal$ship.v:75$33_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:74$208'.
+  Set init value: $formal$ship.v:74$32_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:73$206'.
+  Set init value: $formal$ship.v:73$31_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:72$204'.
+  Set init value: $formal$ship.v:72$30_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:71$202'.
+  Set init value: $formal$ship.v:71$29_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:70$200'.
+  Set init value: $formal$ship.v:70$28_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:69$198'.
+  Set init value: $formal$ship.v:69$27_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:68$196'.
+  Set init value: $formal$ship.v:68$26_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:67$194'.
+  Set init value: $formal$ship.v:67$25_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:63$192'.
+  Set init value: $formal$ship.v:63$24_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:62$190'.
+  Set init value: $formal$ship.v:62$23_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:61$188'.
+  Set init value: $formal$ship.v:61$22_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:60$186'.
+  Set init value: $formal$ship.v:60$21_EN = 1'0
+Found init rule in `\ship.$proc$ship.v:19$185'.
+  Set init value: \o_ship_x = 5'00101
+
+2.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ship.$proc$ship.v:86$232'.
+     1/1: $0$formal$ship.v:86$44_EN[0:0]$233
+Creating decoders for process `\ship.$proc$ship.v:85$230'.
+     1/1: $0$formal$ship.v:85$43_EN[0:0]$231
+Creating decoders for process `\ship.$proc$ship.v:84$228'.
+     1/1: $0$formal$ship.v:84$42_EN[0:0]$229
+Creating decoders for process `\ship.$proc$ship.v:83$226'.
+     1/1: $0$formal$ship.v:83$41_EN[0:0]$227
+Creating decoders for process `\ship.$proc$ship.v:82$224'.
+     1/1: $0$formal$ship.v:82$40_EN[0:0]$225
+Creating decoders for process `\ship.$proc$ship.v:81$222'.
+     1/1: $0$formal$ship.v:81$39_EN[0:0]$223
+Creating decoders for process `\ship.$proc$ship.v:80$220'.
+     1/1: $0$formal$ship.v:80$38_EN[0:0]$221
+Creating decoders for process `\ship.$proc$ship.v:79$218'.
+     1/1: $0$formal$ship.v:79$37_EN[0:0]$219
+Creating decoders for process `\ship.$proc$ship.v:78$216'.
+     1/1: $0$formal$ship.v:78$36_EN[0:0]$217
+Creating decoders for process `\ship.$proc$ship.v:77$214'.
+     1/1: $0$formal$ship.v:77$35_EN[0:0]$215
+Creating decoders for process `\ship.$proc$ship.v:76$212'.
+     1/1: $0$formal$ship.v:76$34_EN[0:0]$213
+Creating decoders for process `\ship.$proc$ship.v:75$210'.
+     1/1: $0$formal$ship.v:75$33_EN[0:0]$211
+Creating decoders for process `\ship.$proc$ship.v:74$208'.
+     1/1: $0$formal$ship.v:74$32_EN[0:0]$209
+Creating decoders for process `\ship.$proc$ship.v:73$206'.
+     1/1: $0$formal$ship.v:73$31_EN[0:0]$207
+Creating decoders for process `\ship.$proc$ship.v:72$204'.
+     1/1: $0$formal$ship.v:72$30_EN[0:0]$205
+Creating decoders for process `\ship.$proc$ship.v:71$202'.
+     1/1: $0$formal$ship.v:71$29_EN[0:0]$203
+Creating decoders for process `\ship.$proc$ship.v:70$200'.
+     1/1: $0$formal$ship.v:70$28_EN[0:0]$201
+Creating decoders for process `\ship.$proc$ship.v:69$198'.
+     1/1: $0$formal$ship.v:69$27_EN[0:0]$199
+Creating decoders for process `\ship.$proc$ship.v:68$196'.
+     1/1: $0$formal$ship.v:68$26_EN[0:0]$197
+Creating decoders for process `\ship.$proc$ship.v:67$194'.
+     1/1: $0$formal$ship.v:67$25_EN[0:0]$195
+Creating decoders for process `\ship.$proc$ship.v:63$192'.
+     1/1: $0$formal$ship.v:63$24_EN[0:0]$193
+Creating decoders for process `\ship.$proc$ship.v:62$190'.
+     1/1: $0$formal$ship.v:62$23_EN[0:0]$191
+Creating decoders for process `\ship.$proc$ship.v:61$188'.
+     1/1: $0$formal$ship.v:61$22_EN[0:0]$189
+Creating decoders for process `\ship.$proc$ship.v:60$186'.
+     1/1: $0$formal$ship.v:60$21_EN[0:0]$187
+Creating decoders for process `\ship.$proc$ship.v:19$185'.
+     1/1: $1\o_ship_x[4:0]
+Creating decoders for process `\ship.$proc$ship.v:59$88'.
+     1/48: $0$formal$ship.v:86$44_EN[0:0]$136
+     2/48: $0$formal$ship.v:86$44_CHECK[0:0]$135
+     3/48: $0$formal$ship.v:85$43_EN[0:0]$134
+     4/48: $0$formal$ship.v:85$43_CHECK[0:0]$133
+     5/48: $0$formal$ship.v:84$42_EN[0:0]$132
+     6/48: $0$formal$ship.v:84$42_CHECK[0:0]$131
+     7/48: $0$formal$ship.v:83$41_EN[0:0]$130
+     8/48: $0$formal$ship.v:83$41_CHECK[0:0]$129
+     9/48: $0$formal$ship.v:82$40_EN[0:0]$128
+    10/48: $0$formal$ship.v:82$40_CHECK[0:0]$127
+    11/48: $0$formal$ship.v:81$39_EN[0:0]$126
+    12/48: $0$formal$ship.v:81$39_CHECK[0:0]$125
+    13/48: $0$formal$ship.v:80$38_EN[0:0]$124
+    14/48: $0$formal$ship.v:80$38_CHECK[0:0]$123
+    15/48: $0$formal$ship.v:79$37_EN[0:0]$122
+    16/48: $0$formal$ship.v:79$37_CHECK[0:0]$121
+    17/48: $0$formal$ship.v:78$36_EN[0:0]$120
+    18/48: $0$formal$ship.v:78$36_CHECK[0:0]$119
+    19/48: $0$formal$ship.v:77$35_EN[0:0]$118
+    20/48: $0$formal$ship.v:77$35_CHECK[0:0]$117
+    21/48: $0$formal$ship.v:76$34_EN[0:0]$116
+    22/48: $0$formal$ship.v:76$34_CHECK[0:0]$115
+    23/48: $0$formal$ship.v:75$33_EN[0:0]$114
+    24/48: $0$formal$ship.v:75$33_CHECK[0:0]$113
+    25/48: $0$formal$ship.v:74$32_EN[0:0]$112
+    26/48: $0$formal$ship.v:74$32_CHECK[0:0]$111
+    27/48: $0$formal$ship.v:73$31_EN[0:0]$110
+    28/48: $0$formal$ship.v:73$31_CHECK[0:0]$109
+    29/48: $0$formal$ship.v:72$30_EN[0:0]$108
+    30/48: $0$formal$ship.v:72$30_CHECK[0:0]$107
+    31/48: $0$formal$ship.v:71$29_EN[0:0]$106
+    32/48: $0$formal$ship.v:71$29_CHECK[0:0]$105
+    33/48: $0$formal$ship.v:70$28_EN[0:0]$104
+    34/48: $0$formal$ship.v:70$28_CHECK[0:0]$103
+    35/48: $0$formal$ship.v:69$27_EN[0:0]$102
+    36/48: $0$formal$ship.v:69$27_CHECK[0:0]$101
+    37/48: $0$formal$ship.v:68$26_EN[0:0]$100
+    38/48: $0$formal$ship.v:68$26_CHECK[0:0]$99
+    39/48: $0$formal$ship.v:67$25_EN[0:0]$98
+    40/48: $0$formal$ship.v:67$25_CHECK[0:0]$97
+    41/48: $0$formal$ship.v:63$24_EN[0:0]$96
+    42/48: $0$formal$ship.v:63$24_CHECK[0:0]$95
+    43/48: $0$formal$ship.v:62$23_EN[0:0]$94
+    44/48: $0$formal$ship.v:62$23_CHECK[0:0]$93
+    45/48: $0$formal$ship.v:61$22_EN[0:0]$92
+    46/48: $0$formal$ship.v:61$22_CHECK[0:0]$91
+    47/48: $0$formal$ship.v:60$21_EN[0:0]$90
+    48/48: $0$formal$ship.v:60$21_CHECK[0:0]$89
+Creating decoders for process `\ship.$proc$ship.v:27$46'.
+     1/82: $81\next_x[4:0]
+     2/82: $80\next_x[4:0]
+     3/82: $79\next_x[4:0]
+     4/82: $78\next_x[4:0]
+     5/82: $77\next_x[4:0]
+     6/82: $76\next_x[4:0]
+     7/82: $75\next_x[4:0]
+     8/82: $74\next_x[4:0]
+     9/82: $73\next_x[4:0]
+    10/82: $72\next_x[4:0]
+    11/82: $71\next_x[4:0]
+    12/82: $70\next_x[4:0]
+    13/82: $69\next_x[4:0]
+    14/82: $68\next_x[4:0]
+    15/82: $67\next_x[4:0]
+    16/82: $66\next_x[4:0]
+    17/82: $65\next_x[4:0]
+    18/82: $64\next_x[4:0]
+    19/82: $63\next_x[4:0]
+    20/82: $62\next_x[4:0]
+    21/82: $61\next_x[4:0]
+    22/82: $60\next_x[4:0]
+    23/82: $59\next_x[4:0]
+    24/82: $58\next_x[4:0]
+    25/82: $57\next_x[4:0]
+    26/82: $56\next_x[4:0]
+    27/82: $55\next_x[4:0]
+    28/82: $54\next_x[4:0]
+    29/82: $53\next_x[4:0]
+    30/82: $52\next_x[4:0]
+    31/82: $51\next_x[4:0]
+    32/82: $50\next_x[4:0]
+    33/82: $49\next_x[4:0]
+    34/82: $48\next_x[4:0]
+    35/82: $47\next_x[4:0]
+    36/82: $46\next_x[4:0]
+    37/82: $45\next_x[4:0]
+    38/82: $44\next_x[4:0]
+    39/82: $43\next_x[4:0]
+    40/82: $42\next_x[4:0]
+    41/82: $41\next_x[4:0]
+    42/82: $40\next_x[4:0]
+    43/82: $39\next_x[4:0]
+    44/82: $38\next_x[4:0]
+    45/82: $37\next_x[4:0]
+    46/82: $36\next_x[4:0]
+    47/82: $35\next_x[4:0]
+    48/82: $34\next_x[4:0]
+    49/82: $33\next_x[4:0]
+    50/82: $32\next_x[4:0]
+    51/82: $31\next_x[4:0]
+    52/82: $30\next_x[4:0]
+    53/82: $29\next_x[4:0]
+    54/82: $28\next_x[4:0]
+    55/82: $27\next_x[4:0]
+    56/82: $26\next_x[4:0]
+    57/82: $25\next_x[4:0]
+    58/82: $24\next_x[4:0]
+    59/82: $23\next_x[4:0]
+    60/82: $22\next_x[4:0]
+    61/82: $21\next_x[4:0]
+    62/82: $20\next_x[4:0]
+    63/82: $19\next_x[4:0]
+    64/82: $18\next_x[4:0]
+    65/82: $17\next_x[4:0]
+    66/82: $16\next_x[4:0]
+    67/82: $15\next_x[4:0]
+    68/82: $14\next_x[4:0]
+    69/82: $13\next_x[4:0]
+    70/82: $12\next_x[4:0]
+    71/82: $11\next_x[4:0]
+    72/82: $10\next_x[4:0]
+    73/82: $9\next_x[4:0]
+    74/82: $8\next_x[4:0]
+    75/82: $7\next_x[4:0]
+    76/82: $6\next_x[4:0]
+    77/82: $5\next_x[4:0]
+    78/82: $4\next_x[4:0]
+    79/82: $3\next_x[4:0]
+    80/82: $2\next_x[4:0]
+    81/82: $1\next_x[4:0]
+    82/82: $0\next_x[4:0]
+Creating decoders for process `\ship.$proc$ship.v:23$45'.
+     1/1: $0\o_ship_x[4:0]
+
+2.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ship.\next_x' from process `\ship.$proc$ship.v:27$46'.
+
+2.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ship.$formal$ship.v:60$21_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$837' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:60$21_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$838' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:61$22_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$839' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:61$22_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$840' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:62$23_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$841' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:62$23_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$842' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:63$24_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$843' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:63$24_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$844' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:67$25_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$845' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:67$25_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$846' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:68$26_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$847' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:68$26_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$848' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:69$27_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$849' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:69$27_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$850' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:70$28_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$851' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:70$28_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$852' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:71$29_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$853' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:71$29_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$854' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:72$30_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$855' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:72$30_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$856' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:73$31_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$857' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:73$31_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$858' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:74$32_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$859' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:74$32_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$860' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:75$33_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$861' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:75$33_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$862' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:76$34_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$863' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:76$34_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$864' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:77$35_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$865' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:77$35_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$866' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:78$36_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$867' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:78$36_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$868' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:79$37_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$869' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:79$37_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$870' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:80$38_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$871' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:80$38_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$872' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:81$39_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$873' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:81$39_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$874' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:82$40_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$875' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:82$40_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$876' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:83$41_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$877' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:83$41_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$878' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:84$42_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$879' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:84$42_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$880' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:85$43_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$881' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:85$43_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$882' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:86$44_CHECK' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$883' with positive edge clock.
+Creating register for signal `\ship.$formal$ship.v:86$44_EN' using process `\ship.$proc$ship.v:59$88'.
+  created $dff cell `$procdff$884' with positive edge clock.
+Creating register for signal `\ship.\o_ship_x' using process `\ship.$proc$ship.v:23$45'.
+  created $dff cell `$procdff$885' with positive edge clock.
+
+2.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ship.$proc$ship.v:86$232'.
+Removing empty process `ship.$proc$ship.v:85$230'.
+Removing empty process `ship.$proc$ship.v:84$228'.
+Removing empty process `ship.$proc$ship.v:83$226'.
+Removing empty process `ship.$proc$ship.v:82$224'.
+Removing empty process `ship.$proc$ship.v:81$222'.
+Removing empty process `ship.$proc$ship.v:80$220'.
+Removing empty process `ship.$proc$ship.v:79$218'.
+Removing empty process `ship.$proc$ship.v:78$216'.
+Removing empty process `ship.$proc$ship.v:77$214'.
+Removing empty process `ship.$proc$ship.v:76$212'.
+Removing empty process `ship.$proc$ship.v:75$210'.
+Removing empty process `ship.$proc$ship.v:74$208'.
+Removing empty process `ship.$proc$ship.v:73$206'.
+Removing empty process `ship.$proc$ship.v:72$204'.
+Removing empty process `ship.$proc$ship.v:71$202'.
+Removing empty process `ship.$proc$ship.v:70$200'.
+Removing empty process `ship.$proc$ship.v:69$198'.
+Removing empty process `ship.$proc$ship.v:68$196'.
+Removing empty process `ship.$proc$ship.v:67$194'.
+Removing empty process `ship.$proc$ship.v:63$192'.
+Removing empty process `ship.$proc$ship.v:62$190'.
+Removing empty process `ship.$proc$ship.v:61$188'.
+Removing empty process `ship.$proc$ship.v:60$186'.
+Removing empty process `ship.$proc$ship.v:19$185'.
+Removing empty process `ship.$proc$ship.v:59$88'.
+Found and cleaned up 41 empty switches in `\ship.$proc$ship.v:27$46'.
+Removing empty process `ship.$proc$ship.v:27$46'.
+Removing empty process `ship.$proc$ship.v:23$45'.
+Cleaned up 41 empty switches.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Replacing $eq cell `$eq$ship.v:28$47' in module `ship' with inverter.
+Replacing $eq cell `$eq$ship.v:33$48' (1) in module `\ship' with constant driver `$eq$ship.v:33$48_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$49' (1) in module `\ship' with constant driver `$eq$ship.v:42$49_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$50' (1) in module `\ship' with constant driver `$eq$ship.v:33$50_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$51' (1) in module `\ship' with constant driver `$eq$ship.v:42$51_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$52' (1) in module `\ship' with constant driver `$eq$ship.v:33$52_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$53' (1) in module `\ship' with constant driver `$eq$ship.v:42$53_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$54' (1) in module `\ship' with constant driver `$eq$ship.v:33$54_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$55' (1) in module `\ship' with constant driver `$eq$ship.v:42$55_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$56' (1) in module `\ship' with constant driver `$eq$ship.v:33$56_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$57' (1) in module `\ship' with constant driver `$eq$ship.v:42$57_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$58' (1) in module `\ship' with constant driver `$eq$ship.v:33$58_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$59' (1) in module `\ship' with constant driver `$eq$ship.v:42$59_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$60' (1) in module `\ship' with constant driver `$eq$ship.v:33$60_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$61' (1) in module `\ship' with constant driver `$eq$ship.v:42$61_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$62' (1) in module `\ship' with constant driver `$eq$ship.v:33$62_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$63' (1) in module `\ship' with constant driver `$eq$ship.v:42$63_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$64' (1) in module `\ship' with constant driver `$eq$ship.v:33$64_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$65' (1) in module `\ship' with constant driver `$eq$ship.v:42$65_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$66' (1) in module `\ship' with constant driver `$eq$ship.v:33$66_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$67' (1) in module `\ship' with constant driver `$eq$ship.v:42$67_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$68' (1) in module `\ship' with constant driver `$eq$ship.v:33$68_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$69' (1) in module `\ship' with constant driver `$eq$ship.v:42$69_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$70' (1) in module `\ship' with constant driver `$eq$ship.v:33$70_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$71' (1) in module `\ship' with constant driver `$eq$ship.v:42$71_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$72' (1) in module `\ship' with constant driver `$eq$ship.v:33$72_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$73' (1) in module `\ship' with constant driver `$eq$ship.v:42$73_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$74' (1) in module `\ship' with constant driver `$eq$ship.v:33$74_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$75' (1) in module `\ship' with constant driver `$eq$ship.v:42$75_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$76' (1) in module `\ship' with constant driver `$eq$ship.v:33$76_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$77' (1) in module `\ship' with constant driver `$eq$ship.v:42$77_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$78' (1) in module `\ship' with constant driver `$eq$ship.v:33$78_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$79' (1) in module `\ship' with constant driver `$eq$ship.v:42$79_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$80' (1) in module `\ship' with constant driver `$eq$ship.v:33$80_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$81' (1) in module `\ship' with constant driver `$eq$ship.v:42$81_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$82' (1) in module `\ship' with constant driver `$eq$ship.v:33$82_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$83' (1) in module `\ship' with constant driver `$eq$ship.v:42$83_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$84' (1) in module `\ship' with constant driver `$eq$ship.v:33$84_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$85' (1) in module `\ship' with constant driver `$eq$ship.v:42$85_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:33$86' (1) in module `\ship' with constant driver `$eq$ship.v:33$86_Y = \i_left_debounced'.
+Replacing $eq cell `$eq$ship.v:42$87' (1) in module `\ship' with constant driver `$eq$ship.v:42$87_Y = \i_right_debounced'.
+Replacing $eq cell `$eq$ship.v:67$141' in module `ship' with $logic_not.
+Optimizing away select inverter for $mux cell `$procmux$241' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$250' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$256' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$262' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$835' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$271' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$280' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$286' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$292' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$301' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$310' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$316' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$322' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$331' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$340' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$346' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$352' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$361' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$370' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$376' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$382' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$391' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$400' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$406' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$412' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$421' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$430' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$436' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$442' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$451' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$460' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$466' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$472' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$481' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$490' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$496' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$502' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$511' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$520' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$526' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$532' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$541' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$550' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$556' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$562' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$571' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$580' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$586' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$592' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$601' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$610' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$616' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$622' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$631' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$640' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$646' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$652' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$661' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$670' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$676' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$682' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$691' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$700' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$706' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$712' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$721' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$730' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$736' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$742' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$751' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$760' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$766' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$772' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$781' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$790' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$796' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$802' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$811' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$820' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$826' in module `ship'.
+Optimizing away select inverter for $mux cell `$procmux$832' in module `ship'.
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ship..
+  removing unused `$not' cell `$eq$ship.v:28$47'.
+  removing unused `$mux' cell `$procmux$265'.
+  removing unused `$mux' cell `$procmux$268'.
+  removing unused `$mux' cell `$procmux$271'.
+  removing unused `$mux' cell `$procmux$274'.
+  removing unused `$mux' cell `$procmux$277'.
+  removing unused `$mux' cell `$procmux$280'.
+  removing unused `$mux' cell `$procmux$283'.
+  removing unused `$mux' cell `$procmux$286'.
+  removing unused `$mux' cell `$procmux$289'.
+  removing unused `$mux' cell `$procmux$292'.
+  removing unused `$mux' cell `$procmux$295'.
+  removing unused `$mux' cell `$procmux$298'.
+  removing unused `$mux' cell `$procmux$301'.
+  removing unused `$mux' cell `$procmux$304'.
+  removing unused `$mux' cell `$procmux$307'.
+  removing unused `$mux' cell `$procmux$310'.
+  removing unused `$mux' cell `$procmux$313'.
+  removing unused `$mux' cell `$procmux$316'.
+  removing unused `$mux' cell `$procmux$319'.
+  removing unused `$mux' cell `$procmux$322'.
+  removing unused `$mux' cell `$procmux$325'.
+  removing unused `$mux' cell `$procmux$328'.
+  removing unused `$mux' cell `$procmux$331'.
+  removing unused `$mux' cell `$procmux$334'.
+  removing unused `$mux' cell `$procmux$337'.
+  removing unused `$mux' cell `$procmux$340'.
+  removing unused `$mux' cell `$procmux$343'.
+  removing unused `$mux' cell `$procmux$346'.
+  removing unused `$mux' cell `$procmux$349'.
+  removing unused `$mux' cell `$procmux$352'.
+  removing unused `$mux' cell `$procmux$355'.
+  removing unused `$mux' cell `$procmux$358'.
+  removing unused `$mux' cell `$procmux$361'.
+  removing unused `$mux' cell `$procmux$364'.
+  removing unused `$mux' cell `$procmux$367'.
+  removing unused `$mux' cell `$procmux$370'.
+  removing unused `$mux' cell `$procmux$373'.
+  removing unused `$mux' cell `$procmux$376'.
+  removing unused `$mux' cell `$procmux$379'.
+  removing unused `$mux' cell `$procmux$382'.
+  removing unused `$mux' cell `$procmux$385'.
+  removing unused `$mux' cell `$procmux$388'.
+  removing unused `$mux' cell `$procmux$391'.
+  removing unused `$mux' cell `$procmux$394'.
+  removing unused `$mux' cell `$procmux$397'.
+  removing unused `$mux' cell `$procmux$400'.
+  removing unused `$mux' cell `$procmux$403'.
+  removing unused `$mux' cell `$procmux$406'.
+  removing unused `$mux' cell `$procmux$409'.
+  removing unused `$mux' cell `$procmux$412'.
+  removing unused `$mux' cell `$procmux$415'.
+  removing unused `$mux' cell `$procmux$418'.
+  removing unused `$mux' cell `$procmux$421'.
+  removing unused `$mux' cell `$procmux$424'.
+  removing unused `$mux' cell `$procmux$427'.
+  removing unused `$mux' cell `$procmux$430'.
+  removing unused `$mux' cell `$procmux$433'.
+  removing unused `$mux' cell `$procmux$436'.
+  removing unused `$mux' cell `$procmux$439'.
+  removing unused `$mux' cell `$procmux$442'.
+  removing unused `$mux' cell `$procmux$445'.
+  removing unused `$mux' cell `$procmux$448'.
+  removing unused `$mux' cell `$procmux$451'.
+  removing unused `$mux' cell `$procmux$454'.
+  removing unused `$mux' cell `$procmux$457'.
+  removing unused `$mux' cell `$procmux$460'.
+  removing unused `$mux' cell `$procmux$463'.
+  removing unused `$mux' cell `$procmux$466'.
+  removing unused `$mux' cell `$procmux$469'.
+  removing unused `$mux' cell `$procmux$472'.
+  removing unused `$mux' cell `$procmux$475'.
+  removing unused `$mux' cell `$procmux$478'.
+  removing unused `$mux' cell `$procmux$481'.
+  removing unused `$mux' cell `$procmux$484'.
+  removing unused `$mux' cell `$procmux$487'.
+  removing unused `$mux' cell `$procmux$490'.
+  removing unused `$mux' cell `$procmux$493'.
+  removing unused `$mux' cell `$procmux$496'.
+  removing unused `$mux' cell `$procmux$499'.
+  removing unused `$mux' cell `$procmux$502'.
+  removing unused `$mux' cell `$procmux$505'.
+  removing unused `$mux' cell `$procmux$508'.
+  removing unused `$mux' cell `$procmux$511'.
+  removing unused `$mux' cell `$procmux$514'.
+  removing unused `$mux' cell `$procmux$517'.
+  removing unused `$mux' cell `$procmux$520'.
+  removing unused `$mux' cell `$procmux$523'.
+  removing unused `$mux' cell `$procmux$526'.
+  removing unused `$mux' cell `$procmux$529'.
+  removing unused `$mux' cell `$procmux$532'.
+  removing unused `$mux' cell `$procmux$535'.
+  removing unused `$mux' cell `$procmux$538'.
+  removing unused `$mux' cell `$procmux$541'.
+  removing unused `$mux' cell `$procmux$544'.
+  removing unused `$mux' cell `$procmux$547'.
+  removing unused `$mux' cell `$procmux$550'.
+  removing unused `$mux' cell `$procmux$553'.
+  removing unused `$mux' cell `$procmux$556'.
+  removing unused `$mux' cell `$procmux$559'.
+  removing unused `$mux' cell `$procmux$562'.
+  removing unused `$mux' cell `$procmux$565'.
+  removing unused `$mux' cell `$procmux$568'.
+  removing unused `$mux' cell `$procmux$571'.
+  removing unused `$mux' cell `$procmux$574'.
+  removing unused `$mux' cell `$procmux$577'.
+  removing unused `$mux' cell `$procmux$580'.
+  removing unused `$mux' cell `$procmux$583'.
+  removing unused `$mux' cell `$procmux$586'.
+  removing unused `$mux' cell `$procmux$589'.
+  removing unused `$mux' cell `$procmux$592'.
+  removing unused `$mux' cell `$procmux$595'.
+  removing unused `$mux' cell `$procmux$598'.
+  removing unused `$mux' cell `$procmux$601'.
+  removing unused `$mux' cell `$procmux$604'.
+  removing unused `$mux' cell `$procmux$607'.
+  removing unused `$mux' cell `$procmux$610'.
+  removing unused `$mux' cell `$procmux$613'.
+  removing unused `$mux' cell `$procmux$616'.
+  removing unused `$mux' cell `$procmux$619'.
+  removing unused `$mux' cell `$procmux$622'.
+  removing unused `$mux' cell `$procmux$625'.
+  removing unused `$mux' cell `$procmux$628'.
+  removing unused `$mux' cell `$procmux$631'.
+  removing unused `$mux' cell `$procmux$634'.
+  removing unused `$mux' cell `$procmux$637'.
+  removing unused `$mux' cell `$procmux$640'.
+  removing unused `$mux' cell `$procmux$643'.
+  removing unused `$mux' cell `$procmux$646'.
+  removing unused `$mux' cell `$procmux$649'.
+  removing unused `$mux' cell `$procmux$652'.
+  removing unused `$mux' cell `$procmux$655'.
+  removing unused `$mux' cell `$procmux$658'.
+  removing unused `$mux' cell `$procmux$661'.
+  removing unused `$mux' cell `$procmux$664'.
+  removing unused `$mux' cell `$procmux$667'.
+  removing unused `$mux' cell `$procmux$670'.
+  removing unused `$mux' cell `$procmux$673'.
+  removing unused `$mux' cell `$procmux$676'.
+  removing unused `$mux' cell `$procmux$679'.
+  removing unused `$mux' cell `$procmux$682'.
+  removing unused `$mux' cell `$procmux$685'.
+  removing unused `$mux' cell `$procmux$688'.
+  removing unused `$mux' cell `$procmux$691'.
+  removing unused `$mux' cell `$procmux$694'.
+  removing unused `$mux' cell `$procmux$697'.
+  removing unused `$mux' cell `$procmux$700'.
+  removing unused `$mux' cell `$procmux$703'.
+  removing unused `$mux' cell `$procmux$706'.
+  removing unused `$mux' cell `$procmux$709'.
+  removing unused `$mux' cell `$procmux$712'.
+  removing unused `$mux' cell `$procmux$715'.
+  removing unused `$mux' cell `$procmux$718'.
+  removing unused `$mux' cell `$procmux$721'.
+  removing unused `$mux' cell `$procmux$724'.
+  removing unused `$mux' cell `$procmux$727'.
+  removing unused `$mux' cell `$procmux$730'.
+  removing unused `$mux' cell `$procmux$733'.
+  removing unused `$mux' cell `$procmux$736'.
+  removing unused `$mux' cell `$procmux$739'.
+  removing unused `$mux' cell `$procmux$742'.
+  removing unused `$mux' cell `$procmux$745'.
+  removing unused `$mux' cell `$procmux$748'.
+  removing unused `$mux' cell `$procmux$751'.
+  removing unused `$mux' cell `$procmux$754'.
+  removing unused `$mux' cell `$procmux$757'.
+  removing unused `$mux' cell `$procmux$760'.
+  removing unused `$mux' cell `$procmux$763'.
+  removing unused `$mux' cell `$procmux$766'.
+  removing unused `$mux' cell `$procmux$769'.
+  removing unused `$mux' cell `$procmux$772'.
+  removing unused `$mux' cell `$procmux$775'.
+  removing unused `$mux' cell `$procmux$778'.
+  removing unused `$mux' cell `$procmux$781'.
+  removing unused `$mux' cell `$procmux$784'.
+  removing unused `$mux' cell `$procmux$787'.
+  removing unused `$mux' cell `$procmux$790'.
+  removing unused `$mux' cell `$procmux$793'.
+  removing unused `$mux' cell `$procmux$796'.
+  removing unused `$mux' cell `$procmux$799'.
+  removing unused `$mux' cell `$procmux$802'.
+  removing unused `$mux' cell `$procmux$805'.
+  removing unused `$mux' cell `$procmux$808'.
+  removing unused `$mux' cell `$procmux$811'.
+  removing unused `$mux' cell `$procmux$814'.
+  removing unused `$mux' cell `$procmux$817'.
+  removing unused `$mux' cell `$procmux$820'.
+  removing unused `$mux' cell `$procmux$823'.
+  removing unused `$mux' cell `$procmux$826'.
+  removing unused `$mux' cell `$procmux$829'.
+  removing unused `$mux' cell `$procmux$832'.
+  removing unused non-port wire \i.
+  removed 590 unused temporary wires.
+Removed 191 unused cells and 590 unused wires.
+
+2.5. Executing CHECK pass (checking for obvious problems).
+checking module ship..
+found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ship'.
+  Cell `$procdff$840' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:61$22_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$840' from module `\ship'.
+  Cell `$procdff$842' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:62$23_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$842' from module `\ship'.
+  Cell `$procdff$844' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:63$24_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$844' from module `\ship'.
+  Cell `$procdff$846' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:67$25_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$846' from module `\ship'.
+  Cell `$procdff$848' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:68$26_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$848' from module `\ship'.
+  Cell `$procdff$850' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:69$27_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$850' from module `\ship'.
+  Cell `$procdff$852' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:70$28_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$852' from module `\ship'.
+  Cell `$procdff$854' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:71$29_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$854' from module `\ship'.
+  Cell `$procdff$856' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:72$30_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$856' from module `\ship'.
+  Cell `$procdff$858' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:73$31_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$858' from module `\ship'.
+  Cell `$procdff$860' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:74$32_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$860' from module `\ship'.
+  Cell `$procdff$862' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:75$33_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$862' from module `\ship'.
+  Cell `$procdff$864' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:76$34_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$864' from module `\ship'.
+  Cell `$procdff$866' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:77$35_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$866' from module `\ship'.
+  Cell `$procdff$868' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:78$36_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$868' from module `\ship'.
+  Cell `$procdff$870' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:79$37_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$870' from module `\ship'.
+  Cell `$procdff$872' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:80$38_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$872' from module `\ship'.
+  Cell `$procdff$874' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:81$39_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$874' from module `\ship'.
+  Cell `$procdff$876' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:82$40_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$876' from module `\ship'.
+  Cell `$procdff$878' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:83$41_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$878' from module `\ship'.
+  Cell `$procdff$880' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:84$42_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$880' from module `\ship'.
+  Cell `$procdff$882' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:85$43_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$882' from module `\ship'.
+  Cell `$procdff$884' is identical to cell `$procdff$838'.
+    Redirecting output \Q: $formal$ship.v:86$44_EN = $formal$ship.v:60$21_EN
+    Removing $dff cell `$procdff$884' from module `\ship'.
+Removed a total of 23 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ship..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$835 (pure)
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$235.
+    dead port 1/2 on $mux $procmux$238.
+    dead port 2/2 on $mux $procmux$241.
+    dead port 1/2 on $mux $procmux$247.
+    dead port 2/2 on $mux $procmux$250.
+    dead port 2/2 on $mux $procmux$253.
+    dead port 2/2 on $mux $procmux$256.
+    dead port 2/2 on $mux $procmux$262.
+Removed 8 multiplexer ports.
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ship.
+    New ctrl vector for $mux cell $procmux$244: { }
+  Optimizing cells in module \ship.
+Performed a total of 1 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ship'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ship..
+  removed 9 unused temporary wires.
+  removing redundant init attribute on $formal$ship.v:61$22_EN.
+  removing redundant init attribute on $formal$ship.v:62$23_EN.
+  removing redundant init attribute on $formal$ship.v:63$24_EN.
+  removing redundant init attribute on $formal$ship.v:67$25_EN.
+  removing redundant init attribute on $formal$ship.v:68$26_EN.
+  removing redundant init attribute on $formal$ship.v:69$27_EN.
+  removing redundant init attribute on $formal$ship.v:70$28_EN.
+  removing redundant init attribute on $formal$ship.v:71$29_EN.
+  removing redundant init attribute on $formal$ship.v:72$30_EN.
+  removing redundant init attribute on $formal$ship.v:73$31_EN.
+  removing redundant init attribute on $formal$ship.v:74$32_EN.
+  removing redundant init attribute on $formal$ship.v:75$33_EN.
+  removing redundant init attribute on $formal$ship.v:76$34_EN.
+  removing redundant init attribute on $formal$ship.v:77$35_EN.
+  removing redundant init attribute on $formal$ship.v:78$36_EN.
+  removing redundant init attribute on $formal$ship.v:79$37_EN.
+  removing redundant init attribute on $formal$ship.v:80$38_EN.
+  removing redundant init attribute on $formal$ship.v:81$39_EN.
+  removing redundant init attribute on $formal$ship.v:82$40_EN.
+  removing redundant init attribute on $formal$ship.v:83$41_EN.
+  removing redundant init attribute on $formal$ship.v:84$42_EN.
+  removing redundant init attribute on $formal$ship.v:85$43_EN.
+  removing redundant init attribute on $formal$ship.v:86$44_EN.
+  removed 23 unused temporary wires.
+Removed 191 unused cells and 622 unused wires.
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ship..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$835 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ship.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ship'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ship..
+Removed 191 unused cells and 622 unused wires.
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+
+2.6.16. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell ship.$ge$ship.v:60$137 ($ge).
+Removed top 27 bits (of 32) from port B of cell ship.$le$ship.v:61$138 ($le).
+Removed top 31 bits (of 32) from port B of cell ship.$ge$ship.v:62$139 ($ge).
+Removed top 27 bits (of 32) from port B of cell ship.$le$ship.v:63$140 ($le).
+Removed top 4 bits (of 5) from port B of cell ship.$eq$ship.v:68$142 ($eq).
+Removed top 3 bits (of 5) from port B of cell ship.$eq$ship.v:69$143 ($eq).
+Removed top 3 bits (of 5) from port B of cell ship.$eq$ship.v:70$144 ($eq).
+Removed top 2 bits (of 5) from port B of cell ship.$eq$ship.v:71$145 ($eq).
+Removed top 2 bits (of 5) from port B of cell ship.$eq$ship.v:72$146 ($eq).
+Removed top 2 bits (of 5) from port B of cell ship.$eq$ship.v:73$147 ($eq).
+Removed top 2 bits (of 5) from port B of cell ship.$eq$ship.v:74$148 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:75$149 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:76$150 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:77$151 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:78$152 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:79$153 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:80$154 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:81$155 ($eq).
+Removed top 1 bits (of 5) from port B of cell ship.$eq$ship.v:82$156 ($eq).
+Removed top 4 bits (of 5) from mux cell ship.$procmux$259 ($mux).
+Removed top 4 bits (of 5) from wire ship.$78\next_x[4:0].
+
+2.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ship..
+  removed 1 unused temporary wires.
+Removed 191 unused cells and 623 unused wires.
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ship'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ship..
+Removed 191 unused cells and 623 unused wires.
+
+2.11.5. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== ship ===
+
+   Number of wires:                 56
+   Number of wire bits:             64
+   Number of public wires:           6
+   Number of public wire bits:      14
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 76
+     $assert                         4
+     $cover                         20
+     $dff                           26
+     $eq                            19
+     $ge                             2
+     $le                             2
+     $logic_not                      1
+     $mux                            2
+
+2.13. Executing CHECK pass (checking for obvious problems).
+checking module ship..
+found and reported 0 problems.
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from $mem).
+
+4. Executing ASYNC2SYNC pass.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ship..
+Removed 191 unused cells and 623 unused wires.
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ship'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ship..
+Removed 191 unused cells and 623 unused wires.
+
+7.5. Finished fast OPT passes.
+
+8. Executing CHECK pass (checking for obvious problems).
+checking module ship..
+found and reported 0 problems.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \ship
+
+9.2. Analyzing design hierarchy..
+Top module:  \ship
+Removed 0 unused modules.
+Module ship directly or indirectly contains $assert cells -> setting "keep" attribute.
+
+10. Executing ILANG backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 111db2907e
+CPU: user 0.12s system 0.01s, MEM: 41.60 MB total, 10.17 MB resident
+Yosys 0.8+143 (git sha1 c82aa49, clang 3.8.0-2ubuntu4 -fPIC -Os)
+Time spent: 18% 6x opt_expr (0 sec), 18% 2x read_verilog (0 sec), ...

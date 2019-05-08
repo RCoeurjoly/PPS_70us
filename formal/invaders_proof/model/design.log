@@ -1,0 +1,659 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2018  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.8+143 (git sha1 c82aa49, clang 3.8.0-2ubuntu4 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing formal SystemVerilog input from `invaders.v' to AST representation.
+Generating RTLIL representation for module `\invaders'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend.
+Parsing formal SystemVerilog input from `timer_1us.v' to AST representation.
+Generating RTLIL representation for module `\timer_1us'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend.
+Parsing formal SystemVerilog input from `clk_25MHz_generator.v' to AST representation.
+Generating RTLIL representation for module `\clk_25MHz_generator'.
+Successfully finished Verilog frontend.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \invaders
+Used module:     \timer_1us
+
+4.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\timer_1us'.
+Parameter 1 (\PERIOD) = 100000
+Generating RTLIL representation for module `$paramod\timer_1us\PERIOD=100000'.
+
+4.1.3. Analyzing design hierarchy..
+Top module:  \invaders
+Used module:     $paramod\timer_1us\PERIOD=100000
+
+4.1.4. Analyzing design hierarchy..
+Top module:  \invaders
+Used module:     $paramod\timer_1us\PERIOD=100000
+Removing unused module `\clk_25MHz_generator'.
+Removing unused module `\timer_1us'.
+Removed 2 unused modules.
+Module $paramod\timer_1us\PERIOD=100000 directly or indirectly contains $assert cells -> setting "keep" attribute.
+Module invaders directly or indirectly contains $assert cells -> setting "keep" attribute.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:16$139'.
+  Set init value: \o_q = 1'0
+  Set init value: \count = 0
+Found init rule in `\invaders.$proc$invaders.v:29$109'.
+  Set init value: \o_hit = 1'0
+  Set init value: \o_invaders_array = 20'00000000000111111111
+  Set init value: \o_invaders_row = 4'0000
+  Set init value: \direction = 1'0
+  Set init value: \moving = 1'0
+
+4.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+4.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:16$139'.
+     1/2: $1\count[31:0]
+     2/2: $1\o_q[0:0]
+Creating decoders for process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:36$131'.
+     1/4: $0$formal$timer_1us.v:38$126_EN[0:0]$135
+     2/4: $0$formal$timer_1us.v:38$126_CHECK[0:0]$134
+     3/4: $0$formal$timer_1us.v:37$125_EN[0:0]$133
+     4/4: $0$formal$timer_1us.v:37$125_CHECK[0:0]$132
+Creating decoders for process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:21$127'.
+     1/2: $0\count[31:0]
+     2/2: $0\o_q[0:0]
+Creating decoders for process `\invaders.$proc$invaders.v:29$109'.
+     1/5: $1\o_hit[0:0]
+     2/5: $1\direction[0:0]
+     3/5: $1\moving[0:0]
+     4/5: $1\o_invaders_row[3:0]
+     5/5: $1\o_invaders_array[19:0]
+Creating decoders for process `\invaders.$proc$invaders.v:96$36'.
+     1/36: $0$formal$invaders.v:114$18_EN[0:0]$72
+     2/36: $0$formal$invaders.v:114$18_CHECK[0:0]$71
+     3/36: $0$formal$invaders.v:113$17_EN[0:0]$70
+     4/36: $0$formal$invaders.v:113$17_CHECK[0:0]$69
+     5/36: $0$formal$invaders.v:112$16_EN[0:0]$68
+     6/36: $0$formal$invaders.v:112$16_CHECK[0:0]$67
+     7/36: $0$formal$invaders.v:111$15_EN[0:0]$66
+     8/36: $0$formal$invaders.v:111$15_CHECK[0:0]$65
+     9/36: $0$formal$invaders.v:110$14_EN[0:0]$64
+    10/36: $0$formal$invaders.v:110$14_CHECK[0:0]$63
+    11/36: $0$formal$invaders.v:109$13_EN[0:0]$62
+    12/36: $0$formal$invaders.v:109$13_CHECK[0:0]$61
+    13/36: $0$formal$invaders.v:108$12_EN[0:0]$60
+    14/36: $0$formal$invaders.v:108$12_CHECK[0:0]$59
+    15/36: $0$formal$invaders.v:107$11_EN[0:0]$58
+    16/36: $0$formal$invaders.v:107$11_CHECK[0:0]$57
+    17/36: $0$formal$invaders.v:106$10_EN[0:0]$56
+    18/36: $0$formal$invaders.v:106$10_CHECK[0:0]$55
+    19/36: $0$formal$invaders.v:105$9_EN[0:0]$54
+    20/36: $0$formal$invaders.v:105$9_CHECK[0:0]$53
+    21/36: $0$formal$invaders.v:104$8_EN[0:0]$52
+    22/36: $0$formal$invaders.v:104$8_CHECK[0:0]$51
+    23/36: $0$formal$invaders.v:103$7_EN[0:0]$50
+    24/36: $0$formal$invaders.v:103$7_CHECK[0:0]$49
+    25/36: $0$formal$invaders.v:102$6_EN[0:0]$48
+    26/36: $0$formal$invaders.v:102$6_CHECK[0:0]$47
+    27/36: $0$formal$invaders.v:101$5_EN[0:0]$46
+    28/36: $0$formal$invaders.v:101$5_CHECK[0:0]$45
+    29/36: $0$formal$invaders.v:100$4_EN[0:0]$44
+    30/36: $0$formal$invaders.v:100$4_CHECK[0:0]$43
+    31/36: $0$formal$invaders.v:99$3_EN[0:0]$42
+    32/36: $0$formal$invaders.v:99$3_CHECK[0:0]$41
+    33/36: $0$formal$invaders.v:98$2_EN[0:0]$40
+    34/36: $0$formal$invaders.v:98$2_CHECK[0:0]$39
+    35/36: $0$formal$invaders.v:97$1_EN[0:0]$38
+    36/36: $0$formal$invaders.v:97$1_CHECK[0:0]$37
+Creating decoders for process `\invaders.$proc$invaders.v:37$19'.
+     1/24: $0\o_invaders_array[19:0] [19]
+     2/24: $0\o_invaders_array[19:0] [13]
+     3/24: $0\o_invaders_array[19:0] [12]
+     4/24: $0\o_invaders_array[19:0] [11]
+     5/24: $0\o_invaders_array[19:0] [10]
+     6/24: $0\o_invaders_array[19:0] [9]
+     7/24: $0\o_invaders_array[19:0] [8]
+     8/24: $0\o_invaders_array[19:0] [7]
+     9/24: $0\o_invaders_array[19:0] [6]
+    10/24: $0\o_invaders_array[19:0] [5]
+    11/24: $0\o_invaders_array[19:0] [4]
+    12/24: $0\o_invaders_array[19:0] [3]
+    13/24: $0\o_invaders_array[19:0] [2]
+    14/24: $0\o_invaders_array[19:0] [1]
+    15/24: $0\o_invaders_array[19:0] [0]
+    16/24: $0\o_invaders_array[19:0] [18]
+    17/24: $0\o_invaders_array[19:0] [17]
+    18/24: $0\o_invaders_array[19:0] [16]
+    19/24: $0\o_invaders_array[19:0] [15]
+    20/24: $0\o_invaders_array[19:0] [14]
+    21/24: $0\direction[0:0]
+    22/24: $0\o_invaders_row[3:0]
+    23/24: $0\moving[0:0]
+    24/24: $0\o_hit[0:0]
+
+4.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\timer_1us\PERIOD=100000.$formal$timer_1us.v:37$125_CHECK' from process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:36$131'.
+No latch inferred for signal `$paramod\timer_1us\PERIOD=100000.$formal$timer_1us.v:37$125_EN' from process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:36$131'.
+No latch inferred for signal `$paramod\timer_1us\PERIOD=100000.$formal$timer_1us.v:38$126_CHECK' from process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:36$131'.
+No latch inferred for signal `$paramod\timer_1us\PERIOD=100000.$formal$timer_1us.v:38$126_EN' from process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:36$131'.
+No latch inferred for signal `\invaders.$formal$invaders.v:97$1_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:97$1_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:98$2_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:98$2_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:99$3_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:99$3_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:100$4_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:100$4_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:101$5_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:101$5_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:102$6_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:102$6_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:103$7_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:103$7_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:104$8_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:104$8_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:105$9_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:105$9_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:106$10_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:106$10_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:107$11_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:107$11_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:108$12_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:108$12_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:109$13_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:109$13_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:110$14_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:110$14_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:111$15_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:111$15_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:112$16_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:112$16_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:113$17_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:113$17_EN' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:114$18_CHECK' from process `\invaders.$proc$invaders.v:96$36'.
+No latch inferred for signal `\invaders.$formal$invaders.v:114$18_EN' from process `\invaders.$proc$invaders.v:96$36'.
+
+4.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\timer_1us\PERIOD=100000.\o_q' using process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:21$127'.
+  created $dff cell `$procdff$950' with positive edge clock.
+Creating register for signal `$paramod\timer_1us\PERIOD=100000.\count' using process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:21$127'.
+  created $dff cell `$procdff$951' with positive edge clock.
+Creating register for signal `\invaders.\o_hit' using process `\invaders.$proc$invaders.v:37$19'.
+  created $dff cell `$procdff$952' with positive edge clock.
+Creating register for signal `\invaders.\o_invaders_array' using process `\invaders.$proc$invaders.v:37$19'.
+  created $dff cell `$procdff$953' with positive edge clock.
+Creating register for signal `\invaders.\o_invaders_row' using process `\invaders.$proc$invaders.v:37$19'.
+  created $dff cell `$procdff$954' with positive edge clock.
+Creating register for signal `\invaders.\direction' using process `\invaders.$proc$invaders.v:37$19'.
+  created $dff cell `$procdff$955' with positive edge clock.
+Creating register for signal `\invaders.\moving' using process `\invaders.$proc$invaders.v:37$19'.
+  created $dff cell `$procdff$956' with positive edge clock.
+
+4.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:16$139'.
+Removing empty process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:36$131'.
+Found and cleaned up 2 empty switches in `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:21$127'.
+Removing empty process `$paramod\timer_1us\PERIOD=100000.$proc$timer_1us.v:21$127'.
+Removing empty process `invaders.$proc$invaders.v:29$109'.
+Removing empty process `invaders.$proc$invaders.v:96$36'.
+Found and cleaned up 9 empty switches in `\invaders.$proc$invaders.v:37$19'.
+Removing empty process `invaders.$proc$invaders.v:37$19'.
+Cleaned up 11 empty switches.
+
+4.3. Executing OPT_EXPR pass (perform const folding).
+Replacing $eq cell `$eq$timer_1us.v:22$128' (1) in module `$paramod\timer_1us\PERIOD=100000' with constant driver `$eq$timer_1us.v:22$128_Y = \i_reset'.
+Replacing $eq cell `$eq$invaders.v:58$29' (1) in module `\invaders' with constant driver `$eq$invaders.v:58$29_Y = \o_invaders_array [19]'.
+Replacing $shl cell `$shl$invaders.v:64$31' (B=1, SHR=-1) in module `invaders' with fixed wiring: { \o_invaders_array [18:0] 1'0 }
+Replacing $eq cell `$eq$invaders.v:38$20' (1) in module `\invaders' with constant driver `$eq$invaders.v:38$20_Y = \i_reset'.
+Replacing $eq cell `$eq$invaders.v:45$24' (1) in module `\invaders' with constant driver `$eq$invaders.v:45$24_Y = $shiftx$invaders.v:45$23_Y'.
+Replacing $eq cell `$eq$invaders.v:56$27' (1) in module `\invaders' with constant driver `$eq$invaders.v:56$27_Y = \tick'.
+Replacing $eq cell `$eq$invaders.v:57$28' in module `invaders' with inverter.
+Replacing $eq cell `$eq$invaders.v:68$32' (1) in module `\invaders' with constant driver `$eq$invaders.v:68$32_Y = \direction'.
+Replacing $eq cell `$eq$invaders.v:69$33' (1) in module `\invaders' with constant driver `$eq$invaders.v:69$33_Y = \o_invaders_array [0]'.
+Replacing $shr cell `$shr$invaders.v:75$35' (B=1, SHR=1) in module `invaders' with fixed wiring: { 1'0 \o_invaders_array [19:1] }
+Replacing $eq cell `$eq$invaders.v:97$73' in module `invaders' with $logic_not.
+Replacing $eq cell `$eq$invaders.v:113$89' (isneq) in module `\invaders' with constant driver `$eq$invaders.v:113$89_Y = 1'0'.
+Replacing $eq cell `$eq$invaders.v:114$90' (isneq) in module `\invaders' with constant driver `$eq$invaders.v:114$90_Y = 1'0'.
+Replacing $eq cell `$procmux$711_CMP0' in module `invaders' with $logic_not.
+Optimizing away select inverter for $mux cell `$procmux$163' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$189' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$221' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$254' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$288' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$323' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$359' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$396' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$434' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$473' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$513' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$554' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$596' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$639' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$683' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$728' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$755' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$783' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$812' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$842' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$873' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$897' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$919' in module `invaders'.
+Optimizing away select inverter for $mux cell `$procmux$937' in module `invaders'.
+
+4.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\timer_1us\PERIOD=100000..
+  removed 17 unused temporary wires.
+Finding unused cells or wires in module \invaders..
+  removing unused `$not' cell `$eq$invaders.v:57$28'.
+  removing unused `$mux' cell `$procmux$914'.
+  removing unused `$mux' cell `$procmux$919'.
+  removing unused `$mux' cell `$procmux$921'.
+  removing unused `$mux' cell `$procmux$924'.
+  removing unused `$mux' cell `$procmux$927'.
+  removing unused `$mux' cell `$procmux$930'.
+  removing unused `$dff' cell `$procdff$956'.
+  removing unused non-port wire \moving.
+  removed 307 unused temporary wires.
+Removed 8 unused cells and 324 unused wires.
+
+4.5. Executing CHECK pass (checking for obvious problems).
+checking module $paramod\timer_1us\PERIOD=100000..
+checking module invaders..
+found and reported 0 problems.
+
+4.6. Executing OPT pass (performing simple optimizations).
+
+4.6.1. Executing OPT_EXPR pass (perform const folding).
+
+4.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\timer_1us\PERIOD=100000'.
+Finding identical cells in module `\invaders'.
+  Cell `$add$invaders.v:59$30' is identical to cell `$add$invaders.v:45$21'.
+    Redirecting output \Y: $add$invaders.v:59$30_Y = $add$invaders.v:45$21_Y
+    Removing $add cell `$add$invaders.v:59$30' from module `\invaders'.
+  Cell `$add$invaders.v:70$34' is identical to cell `$add$invaders.v:45$21'.
+    Redirecting output \Y: $add$invaders.v:70$34_Y = $add$invaders.v:45$21_Y
+    Removing $add cell `$add$invaders.v:70$34' from module `\invaders'.
+  Cell `$cover$invaders.v:114$108' is identical to cell `$cover$invaders.v:113$107'.
+    Removing $cover cell `$cover$invaders.v:114$108' from module `\invaders'.
+  Cell `$eq$invaders.v:49$26' is identical to cell `$eq$invaders.v:111$87'.
+    Redirecting output \Y: $eq$invaders.v:49$26_Y = $0$formal$invaders.v:111$15_CHECK[0:0]$65
+    Removing $eq cell `$eq$invaders.v:49$26' from module `\invaders'.
+Removed a total of 4 cells.
+
+4.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\timer_1us\PERIOD=100000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$144 (pure)
+    Root of a mux tree: $procmux$150 (pure)
+  Analyzing evaluation results.
+Running muxtree optimizer on module \invaders..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$176 (pure)
+      Replacing known input bits on port B of cell $procmux$161: \o_invaders_array [19] -> 1'1
+    Root of a mux tree: $procmux$208 (pure)
+    Root of a mux tree: $procmux$241 (pure)
+    Root of a mux tree: $procmux$275 (pure)
+    Root of a mux tree: $procmux$310 (pure)
+    Root of a mux tree: $procmux$346 (pure)
+    Root of a mux tree: $procmux$383 (pure)
+    Root of a mux tree: $procmux$421 (pure)
+    Root of a mux tree: $procmux$460 (pure)
+    Root of a mux tree: $procmux$500 (pure)
+    Root of a mux tree: $procmux$541 (pure)
+    Root of a mux tree: $procmux$583 (pure)
+    Root of a mux tree: $procmux$626 (pure)
+    Root of a mux tree: $procmux$670 (pure)
+    Root of a mux tree: $procmux$715 (pure)
+      Replacing known input bits on port B of cell $procmux$675: \o_invaders_array [0] -> 1'1
+    Root of a mux tree: $procmux$742 (pure)
+    Root of a mux tree: $procmux$770 (pure)
+    Root of a mux tree: $procmux$799 (pure)
+    Root of a mux tree: $procmux$829 (pure)
+    Root of a mux tree: $procmux$860 (pure)
+    Root of a mux tree: $procmux$884 (pure)
+      Replacing known input bits on port A of cell $procmux$867: \direction -> 1'0
+      Replacing known input bits on port A of cell $procmux$865: \direction -> 1'1
+      Replacing known input bits on port A of cell $procmux$871: \direction -> 1'0
+    Root of a mux tree: $procmux$908 (pure)
+    Root of a mux tree: $procmux$948 (pure)
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$157.
+    dead port 2/2 on $mux $procmux$183.
+    dead port 2/2 on $mux $procmux$215.
+    dead port 2/2 on $mux $procmux$248.
+    dead port 2/2 on $mux $procmux$282.
+    dead port 2/2 on $mux $procmux$317.
+    dead port 2/2 on $mux $procmux$353.
+    dead port 2/2 on $mux $procmux$390.
+    dead port 2/2 on $mux $procmux$428.
+    dead port 2/2 on $mux $procmux$467.
+    dead port 2/2 on $mux $procmux$507.
+    dead port 2/2 on $mux $procmux$548.
+    dead port 2/2 on $mux $procmux$590.
+    dead port 2/2 on $mux $procmux$633.
+    dead port 2/2 on $mux $procmux$677.
+    dead port 2/2 on $mux $procmux$722.
+    dead port 2/2 on $mux $procmux$749.
+    dead port 2/2 on $mux $procmux$777.
+    dead port 2/2 on $mux $procmux$806.
+    dead port 2/2 on $mux $procmux$836.
+    dead port 2/2 on $mux $procmux$867.
+    dead port 2/2 on $mux $procmux$891.
+    dead port 2/2 on $mux $procmux$934.
+Removed 23 multiplexer ports.
+
+4.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\timer_1us\PERIOD=100000.
+  Optimizing cells in module \invaders.
+    New ctrl vector for $mux cell $procmux$937: { }
+  Optimizing cells in module \invaders.
+Performed a total of 1 changes.
+
+4.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\timer_1us\PERIOD=100000'.
+Finding identical cells in module `\invaders'.
+Removed a total of 0 cells.
+
+4.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\timer_1us\PERIOD=100000..
+Finding unused cells or wires in module \invaders..
+  removed 27 unused temporary wires.
+Removed 8 unused cells and 351 unused wires.
+
+4.6.8. Executing OPT_EXPR pass (perform const folding).
+
+4.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\timer_1us\PERIOD=100000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$144 (pure)
+    Root of a mux tree: $procmux$150 (pure)
+  Analyzing evaluation results.
+Running muxtree optimizer on module \invaders..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$176 (pure)
+    Root of a mux tree: $procmux$208 (pure)
+    Root of a mux tree: $procmux$241 (pure)
+    Root of a mux tree: $procmux$275 (pure)
+    Root of a mux tree: $procmux$310 (pure)
+    Root of a mux tree: $procmux$346 (pure)
+    Root of a mux tree: $procmux$383 (pure)
+    Root of a mux tree: $procmux$421 (pure)
+    Root of a mux tree: $procmux$460 (pure)
+    Root of a mux tree: $procmux$500 (pure)
+    Root of a mux tree: $procmux$541 (pure)
+    Root of a mux tree: $procmux$583 (pure)
+    Root of a mux tree: $procmux$626 (pure)
+    Root of a mux tree: $procmux$670 (pure)
+    Root of a mux tree: $procmux$715 (pure)
+    Root of a mux tree: $procmux$742 (pure)
+    Root of a mux tree: $procmux$770 (pure)
+    Root of a mux tree: $procmux$799 (pure)
+    Root of a mux tree: $procmux$829 (pure)
+    Root of a mux tree: $procmux$860 (pure)
+    Root of a mux tree: $procmux$884 (pure)
+    Root of a mux tree: $procmux$908 (pure)
+    Root of a mux tree: $procmux$948 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+4.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\timer_1us\PERIOD=100000.
+  Optimizing cells in module \invaders.
+Performed a total of 0 changes.
+
+4.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\timer_1us\PERIOD=100000'.
+Finding identical cells in module `\invaders'.
+Removed a total of 0 cells.
+
+4.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\timer_1us\PERIOD=100000..
+Finding unused cells or wires in module \invaders..
+Removed 8 unused cells and 351 unused wires.
+
+4.6.15. Executing OPT_EXPR pass (perform const folding).
+
+4.6.16. Finished OPT passes. (There is nothing left to do.)
+
+4.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 10 bits (of 32) from port B of cell $paramod\timer_1us\PERIOD=100000.$eq$timer_1us.v:26$129 ($eq).
+Removed top 31 bits (of 32) from port B of cell $paramod\timer_1us\PERIOD=100000.$add$timer_1us.v:31$130 ($add).
+Removed top 10 bits (of 32) from port B of cell $paramod\timer_1us\PERIOD=100000.$le$timer_1us.v:37$136 ($le).
+Removed top 31 bits (of 32) from port B of cell invaders.$add$invaders.v:45$21 ($add).
+Removed top 27 bits (of 32) from port Y of cell invaders.$add$invaders.v:45$21 ($add).
+Removed top 27 bits (of 32) from port B of cell invaders.$eq$invaders.v:45$22 ($eq).
+Removed top 3 bits (of 4) from port B of cell invaders.$eq$invaders.v:98$74 ($eq).
+Removed top 2 bits (of 4) from port B of cell invaders.$eq$invaders.v:99$75 ($eq).
+Removed top 2 bits (of 4) from port B of cell invaders.$eq$invaders.v:100$76 ($eq).
+Removed top 1 bits (of 4) from port B of cell invaders.$eq$invaders.v:101$77 ($eq).
+Removed top 1 bits (of 4) from port B of cell invaders.$eq$invaders.v:102$78 ($eq).
+Removed top 1 bits (of 4) from port B of cell invaders.$eq$invaders.v:103$79 ($eq).
+Removed top 1 bits (of 4) from port B of cell invaders.$eq$invaders.v:104$80 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$204_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$237_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$271_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$306_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$342_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$379_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell invaders.$procmux$417_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell invaders.$procmux$456_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell invaders.$procmux$496_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell invaders.$procmux$537_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell invaders.$procmux$579_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell invaders.$procmux$622_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell invaders.$procmux$666_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$825_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell invaders.$procmux$856_CMP0 ($eq).
+Removed top 27 bits (of 32) from wire invaders.$add$invaders.v:45$21_Y.
+
+4.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+4.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\timer_1us\PERIOD=100000..
+Finding unused cells or wires in module \invaders..
+  removed 1 unused temporary wires.
+Removed 8 unused cells and 352 unused wires.
+
+4.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.11. Executing OPT pass (performing simple optimizations).
+
+4.11.1. Executing OPT_EXPR pass (perform const folding).
+
+4.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\timer_1us\PERIOD=100000'.
+Finding identical cells in module `\invaders'.
+Removed a total of 0 cells.
+
+4.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\timer_1us\PERIOD=100000..
+Finding unused cells or wires in module \invaders..
+Removed 8 unused cells and 352 unused wires.
+
+4.11.5. Finished fast OPT passes.
+
+4.12. Printing statistics.
+
+=== $paramod\timer_1us\PERIOD=100000 ===
+
+   Number of wires:                 11
+   Number of wire bits:            135
+   Number of public wires:           4
+   Number of public wire bits:      35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 11
+     $add                            1
+     $cover                          2
+     $dff                            2
+     $eq                             1
+     $le                             1
+     $mux                            4
+
+=== invaders ===
+
+   Number of wires:                208
+   Number of wire bits:            281
+   Number of public wires:           9
+   Number of public wire bits:      38
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                240
+     $add                            1
+     $cover                         17
+     $dff                            4
+     $eq                            35
+     $logic_and                      1
+     $logic_not                      2
+     $mux                          178
+     $paramod\timer_1us\PERIOD=100000      1
+     $shiftx                         1
+
+=== design hierarchy ===
+
+   invaders                          1
+     $paramod\timer_1us\PERIOD=100000      1
+
+   Number of wires:                219
+   Number of wire bits:            416
+   Number of public wires:          13
+   Number of public wire bits:      73
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                250
+     $add                            2
+     $cover                         19
+     $dff                            6
+     $eq                            36
+     $le                             1
+     $logic_and                      1
+     $logic_not                      2
+     $mux                          182
+     $shiftx                         1
+
+4.13. Executing CHECK pass (checking for obvious problems).
+checking module $paramod\timer_1us\PERIOD=100000..
+checking module invaders..
+found and reported 0 problems.
+
+5. Executing MEMORY_NORDFF pass (extracting $dff cells from $mem).
+
+6. Executing ASYNC2SYNC pass.
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\timer_1us\PERIOD=100000..
+  removing unused `$le' cell `$le$timer_1us.v:37$136'.
+  removed 1 unused temporary wires.
+Finding unused cells or wires in module \invaders..
+  removing unused `$logic_not' cell `$eq$invaders.v:97$73'.
+  removing unused `$eq' cell `$eq$invaders.v:98$74'.
+  removing unused `$eq' cell `$eq$invaders.v:99$75'.
+  removing unused `$eq' cell `$eq$invaders.v:100$76'.
+  removing unused `$eq' cell `$eq$invaders.v:101$77'.
+  removing unused `$eq' cell `$eq$invaders.v:102$78'.
+  removing unused `$eq' cell `$eq$invaders.v:103$79'.
+  removing unused `$eq' cell `$eq$invaders.v:104$80'.
+  removing unused `$eq' cell `$eq$invaders.v:105$81'.
+  removing unused `$eq' cell `$eq$invaders.v:106$82'.
+  removing unused `$eq' cell `$eq$invaders.v:107$83'.
+  removing unused `$eq' cell `$eq$invaders.v:108$84'.
+  removing unused `$eq' cell `$eq$invaders.v:109$85'.
+  removing unused `$eq' cell `$eq$invaders.v:110$86'.
+  removing unused `$eq' cell `$eq$invaders.v:112$88'.
+  removed 15 unused temporary wires.
+Removed 24 unused cells and 368 unused wires.
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\timer_1us\PERIOD=100000'.
+Finding identical cells in module `\invaders'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\timer_1us\PERIOD=100000..
+Finding unused cells or wires in module \invaders..
+Removed 24 unused cells and 368 unused wires.
+
+9.5. Finished fast OPT passes.
+
+10. Executing CHECK pass (checking for obvious problems).
+checking module $paramod\timer_1us\PERIOD=100000..
+checking module invaders..
+found and reported 0 problems.
+
+11. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1. Analyzing design hierarchy..
+Top module:  \invaders
+Used module:     $paramod\timer_1us\PERIOD=100000
+
+11.2. Analyzing design hierarchy..
+Top module:  \invaders
+Used module:     $paramod\timer_1us\PERIOD=100000
+Removed 0 unused modules.
+
+12. Executing ILANG backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: b4e220fcba
+CPU: user 0.23s system 0.01s, MEM: 41.41 MB total, 10.58 MB resident
+Yosys 0.8+143 (git sha1 c82aa49, clang 3.8.0-2ubuntu4 -fPIC -Os)
+Time spent: 17% 7x opt_clean (0 sec), 17% 6x opt_expr (0 sec), ...

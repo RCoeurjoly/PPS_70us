@@ -1,0 +1,3 @@
+set_io i_clk_12MHz J3
+set_io o_PPS C16
+set_io o_LED B5

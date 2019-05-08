@@ -1,0 +1,613 @@
+initial
+assume (= [direction] false)
+assume (= [o_hit] false)
+assume (= [o_invaders_array] #x001ff)
+assume (= [o_invaders_row] #x0)
+assume (= [speed_timer1.count] #x00000000)
+assume (= [speed_timer1.o_q] false)
+
+state 0
+assume (= [i_bullet_x] #b00011)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 1
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 2
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 3
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 4
+assume (= [i_bullet_x] #b00110)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 5
+assume (= [i_bullet_x] #b10000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 6
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x5)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 7
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 8
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 9
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 10
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x0)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 11
+assume (= [i_bullet_x] #b00111)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 12
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 13
+assume (= [i_bullet_x] #b00011)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 14
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 15
+assume (= [i_bullet_x] #b00110)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 16
+assume (= [i_bullet_x] #b01001)
+assume (= [i_bullet_y] #x0)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 17
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x3)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 18
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x9)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 19
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 20
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 21
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 22
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 23
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 24
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 25
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 26
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 27
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 28
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 29
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 30
+assume (= [i_bullet_x] #b00110)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 31
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 32
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 33
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 34
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 35
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 36
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 37
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 38
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x0)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 39
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 40
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x0)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 41
+assume (= [i_bullet_x] #b00110)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 42
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 43
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 44
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 45
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 46
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 47
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 48
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 49
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 50
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 51
+assume (= [i_bullet_x] #b00111)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 52
+assume (= [i_bullet_x] #b00011)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 53
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 54
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 55
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 56
+assume (= [i_bullet_x] #b01111)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 57
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 58
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 59
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 60
+assume (= [i_bullet_x] #b00111)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 61
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 62
+assume (= [i_bullet_x] #b00011)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 63
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 64
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 65
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 66
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 67
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 68
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 69
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 70
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 71
+assume (= [i_bullet_x] #b00011)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 72
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x0)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 73
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 74
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 75
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 76
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 77
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 78
+assume (= [i_bullet_x] #b00110)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 79
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 80
+assume (= [i_bullet_x] #b00010)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 81
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 82
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 83
+assume (= [i_bullet_x] #b00011)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 84
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x0)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 85
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 86
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 87
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 88
+assume (= [i_bullet_x] #b01110)
+assume (= [i_bullet_y] #x0)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 89
+assume (= [i_bullet_x] #b00111)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 90
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 91
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 92
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 93
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 94
+assume (= [i_bullet_x] #b00001)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 95
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 96
+assume (= [i_bullet_x] #b00101)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] true)
+
+state 97
+assume (= [i_bullet_x] #b01000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 98
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 99
+assume (= [i_bullet_x] #b00100)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)
+
+state 100
+assume (= [i_bullet_x] #b00000)
+assume (= [i_bullet_y] #x1)
+assume (= [i_clk_25MHz] false)
+assume (= [i_reset] false)

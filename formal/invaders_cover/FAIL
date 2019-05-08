@@ -1,0 +1,3 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:01:20 (80)
+Elapsed process time [H:MM:SS (secs)]: 0:01:19 (79)
+engine_0 (smtbmc z3) returned FAIL

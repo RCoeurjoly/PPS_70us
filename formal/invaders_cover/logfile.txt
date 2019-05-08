@@ -1,0 +1,164 @@
+SBY 21:36:33 [/home/rcl/Space-Invaders/formal/invaders_proof] Removing direcory '/home/rcl/Space-Invaders/formal/invaders_proof'.
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] Removing direcory '/home/rcl/Space-Invaders/formal/invaders_cover'.
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] Copy '/home/rcl/Space-Invaders/rtl/clk_25MHz_generator.v' to '/home/rcl/Space-Invaders/formal/invaders_cover/src/clk_25MHz_generator.v'.
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] Copy '/home/rcl/Space-Invaders/rtl/timer_1us.v' to '/home/rcl/Space-Invaders/formal/invaders_cover/src/timer_1us.v'.
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] Copy '/home/rcl/Space-Invaders/rtl/invaders.v' to '/home/rcl/Space-Invaders/formal/invaders_cover/src/invaders.v'.
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: smtbmc z3
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] base: starting process "cd /home/rcl/Space-Invaders/formal/invaders_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] base: finished (returncode=0)
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] smt2: starting process "cd /home/rcl/Space-Invaders/formal/invaders_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] smt2: finished (returncode=0)
+SBY 21:36:35 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: starting process "cd /home/rcl/Space-Invaders/formal/invaders_cover; yosys-smtbmc -s z3 --presat -c --noprogress -t 20 --append 100 --dump-vcd engine_0/trace%.vcd --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Solver: z3
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 1.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 2.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 3.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 4.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 5.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 6.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 7.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 8.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 9.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 10.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 11.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 12.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 13.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 14.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 15.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 16.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 17.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 18.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 19.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 20.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 21.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 22.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 23.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 24.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 25.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 26.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 27.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 28.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 29.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 30.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 31.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 32.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 33.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 34.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 35.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 36.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 37.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 38.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 39.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 40.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 41.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 42.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 43.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 44.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 45.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 46.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 47.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 48.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 49.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 50.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 51.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 52.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 53.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 54.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 55.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 56.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 57.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 58.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 59.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 60.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 61.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 62.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 63.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 64.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 65.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 66.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 67.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 68.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 69.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 70.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 71.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 72.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 73.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 74.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 75.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 76.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 77.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 78.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 79.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 80.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 81.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 82.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 83.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 84.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 85.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 86.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 87.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 88.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 89.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 90.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 91.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 92.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 93.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 94.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 95.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 96.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 97.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 98.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 99.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Appending additional step 100.
+SBY 21:36:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:00:00  Re-solving with appended steps..
+SBY 21:37:36 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:00  waiting for solver (1 minute)
+SBY 21:37:45 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:09  Reached cover statement at invaders.v:97 in step 0.
+SBY 21:37:45 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:09  Reached cover statement at timer_1us.v:37 in step 0.
+SBY 21:37:45 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:09  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 21:37:45 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:09  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 0..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 1..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 2..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 3..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 4..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 5..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 6..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 7..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 8..
+SBY 21:37:46 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:10  Checking cover reachability in step 9..
+SBY 21:37:47 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:11  Checking cover reachability in step 10..
+SBY 21:37:47 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:11  Checking cover reachability in step 11..
+SBY 21:37:48 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:12  Checking cover reachability in step 12..
+SBY 21:37:48 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:12  Checking cover reachability in step 13..
+SBY 21:37:48 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:12  Checking cover reachability in step 14..
+SBY 21:37:49 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:13  Checking cover reachability in step 15..
+SBY 21:37:50 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:14  Checking cover reachability in step 16..
+SBY 21:37:51 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:15  Checking cover reachability in step 17..
+SBY 21:37:53 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:17  Checking cover reachability in step 18..
+SBY 21:37:54 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:18  Checking cover reachability in step 19..
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:111.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:100.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:108.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:105.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:107.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:109.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:103.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:110.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:104.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:98.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:106.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:113.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:102.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:112.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:99.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at invaders.v:101.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Unreached cover statement at timer_1us.v:38.
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: ##   0:01:19  Status: FAILED (!)
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: finished (returncode=1)
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] engine_0: Status returned by engine: FAIL
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:01:20 (80)
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:01:19 (79)
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] summary: engine_0 (smtbmc z3) returned FAIL
+SBY 21:37:55 [/home/rcl/Space-Invaders/formal/invaders_cover] DONE (FAIL, rc=2)
